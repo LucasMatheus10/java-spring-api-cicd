@@ -1,4 +1,4 @@
-FROM eclipse-temurin:21jdk-jammy as builder
+FROM eclipse-temurin:21-jdk-jammy as builder
 
 WORKDIR /app
 
@@ -12,7 +12,7 @@ COPY src ./src
 
 RUN ./mvnw package -DskipTests  
 
-FROM eclipse-temurin:21jre-jammy
+FROM eclipse-temurin:21-jre-jammy
 
 WORKDIR /app
 
